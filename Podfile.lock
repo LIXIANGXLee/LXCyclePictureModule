@@ -1,0 +1,23 @@
+PODS:
+  - LXCyclePictureManager (1.0.0):
+    - LXFitManager
+  - LXFitManager (1.0.0)
+
+DEPENDENCIES:
+  - LXCyclePictureManager (from `./`)
+
+SPEC REPOS:
+  trunk:
+    - LXFitManager
+
+EXTERNAL SOURCES:
+  LXCyclePictureManager:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  LXCyclePictureManager: 65b9884f10418c662751940e53a0d90a8619159f
+  LXFitManager: e8f88896ba1c848c263c49250b590802a987ab3e
+
+PODFILE CHECKSUM: be1c89e6ce8b804b4f0577813c8d15406d605100
+
+COCOAPODS: 1.9.1

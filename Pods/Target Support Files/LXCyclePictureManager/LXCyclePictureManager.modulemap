@@ -1,0 +1,6 @@
+framework module LXCyclePictureManager {
+  umbrella header "LXCyclePictureManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
