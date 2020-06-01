@@ -13,7 +13,7 @@ public typealias LoadBlock = ((LXCyclePictureProtocol, UIImageView) -> ())
 // MARK: - cell
 public class LXCyclePictureCell: UICollectionViewCell {
     
-    fileprivate var imgView: UIImageView = UIImageView()
+   fileprivate var imgView: UIImageView = UIImageView()
     
     /// public 数据源
    public var picModel: LXCyclePictureProtocol? {

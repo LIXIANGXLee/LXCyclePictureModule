@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     fileprivate lazy var cyclePictureView: LXCyclePictureView = {
         var config = LXCyclePictureConfig()
-        let cyclePictureView =  LXCyclePictureView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: LXFit.fitFloat(260) ), config: config)
+        let cyclePictureView =  LXCyclePictureView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: LXFit.fitFloat(180) ), config: config)
          cyclePictureView.loadBlock = {
             (model, imgView) -> () in
             imgView.kf.setImage(with: URL(string: model.imgUrl))

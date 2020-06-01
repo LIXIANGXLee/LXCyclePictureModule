@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import LXFitManager
 
 public struct LXCyclePictureConfig {
 
     public init(pageControlX: CGFloat = 0,
-                 pageControlY: CGFloat = 240,
-                 pageControlW: CGFloat = 375,
-                 pageControlH: CGFloat = 20,
+                pageControlY: CGFloat = LXFit.fitFloat(160),
+                pageControlW: CGFloat = UIScreen.main.bounds.width,
+                 pageControlH: CGFloat = LXFit.fitFloat(20),
                  pageIndicatorTintColor: UIColor = UIColor.lightGray,
                  currentPageIndicatorTintColor: UIColor = UIColor.orange,
                  sectionCount: Int = 20,

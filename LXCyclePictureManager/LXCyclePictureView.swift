@@ -8,7 +8,6 @@
 // 轮播图
 
 import UIKit
-import LXFitManager
 
 // MARK: - 协议
 public protocol LXCyclePictureViewDelegate: AnyObject {
@@ -45,7 +44,7 @@ public class LXCyclePictureView: UIView {
     }()
   
     fileprivate lazy var pageControl: UIPageControl = {
-        let pageControl = UIPageControl(frame: CGRect(x: LXFit.fitFloat(self.config.pageControlX), y: LXFit.fitFloat(self.config.pageControlY), width:  LXFit.fitFloat(self.config.pageControlW), height: LXFit.fitFloat(self.config.pageControlH)))
+        let pageControl = UIPageControl(frame: CGRect(x: self.config.pageControlX, y: self.config.pageControlY, width:  self.config.pageControlW, height: self.config.pageControlH))
         pageControl.pageIndicatorTintColor = self.config.pageIndicatorTintColor
         pageControl.currentPageIndicatorTintColor = self.config.currentPageIndicatorTintColor
         pageControl.hidesForSinglePage = true
