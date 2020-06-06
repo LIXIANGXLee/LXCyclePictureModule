@@ -11,7 +11,9 @@ import LXFitManager
 
 public struct LXCyclePictureConfig {
 
-    public init(pageControlX: CGFloat = 0,
+    public init(imgViewLeftRightMargin: CGFloat = 0,
+                imgViewCornerRadius: CGFloat = 0,
+                pageControlX: CGFloat = 0,
                 pageControlY: CGFloat = LXFit.fitFloat(160),
                 pageControlW: CGFloat = UIScreen.main.bounds.width,
                  pageControlH: CGFloat = LXFit.fitFloat(20),
@@ -19,6 +21,8 @@ public struct LXCyclePictureConfig {
                  currentPageIndicatorTintColor: UIColor = UIColor.orange,
                  sectionCount: Int = 20,
                  isPicScrollEnable: Bool = true) {
+        self.imgViewLeftRightMargin = imgViewLeftRightMargin
+        self.imgViewCornerRadius = imgViewCornerRadius
         self.pageControlX = pageControlX
         self.pageControlY = pageControlY
         self.pageControlH = pageControlH
@@ -29,6 +33,9 @@ public struct LXCyclePictureConfig {
         self.isPicScrollEnable = isPicScrollEnable
     }
     
+   public var imgViewLeftRightMargin: CGFloat
+   public var imgViewCornerRadius: CGFloat
+     
    public var pageControlY: CGFloat
    public var pageControlX: CGFloat
     /// 375 是一个基准数字

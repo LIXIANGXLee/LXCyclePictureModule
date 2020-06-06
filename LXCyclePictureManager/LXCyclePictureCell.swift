@@ -14,6 +14,8 @@ public typealias LoadBlock = ((LXCyclePictureProtocol, UIImageView) -> ())
 public class LXCyclePictureCell: UICollectionViewCell {
     
    fileprivate var imgView: UIImageView = UIImageView()
+   fileprivate var imgViewLeftRightMargin: CGFloat = 0
+   fileprivate var imgViewCornerRadius: CGFloat = 0
     
     /// public 数据源
    public var picModel: LXCyclePictureProtocol? {
@@ -31,13 +33,23 @@ public class LXCyclePictureCell: UICollectionViewCell {
         super.init(frame: frame)
         backgroundColor = UIColor.white
         addSubview(imgView)
+        imgView.clipsToBounds = true
     }
+    
    public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        imgView.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height)
+        imgView.frame = CGRect(x: self.imgViewLeftRightMargin, y: 0, width: bounds.width - self.imgViewLeftRightMargin * 2, height: bounds.height)
     }
+    
+    public func setImgView(cornerRadius: CGFloat, margin: CGFloat) {
+        self.imgViewCornerRadius = cornerRadius
+        self.imgViewLeftRightMargin = margin
+        imgView.layer.cornerRadius = cornerRadius
+        setNeedsLayout()
+    }
+    
 }

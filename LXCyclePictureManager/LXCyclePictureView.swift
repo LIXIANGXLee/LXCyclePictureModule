@@ -184,6 +184,7 @@ extension LXCyclePictureView: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identified, for: indexPath) as! LXCyclePictureCell
+        cell.setImgView(cornerRadius: config.imgViewCornerRadius, margin: config.imgViewLeftRightMargin)
         cell.loadBlock = loadBlock
         cell.picModel = picModels?[indexPath.item]
         return cell

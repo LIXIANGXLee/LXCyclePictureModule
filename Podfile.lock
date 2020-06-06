@@ -1,5 +1,5 @@
 PODS:
-  - LXCyclePictureManager (1.0.0):
+  - LXCyclePictureManager (1.1.0):
     - LXFitManager
   - LXFitManager (1.0.0)
 
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  LXCyclePictureManager: 65b9884f10418c662751940e53a0d90a8619159f
+  LXCyclePictureManager: 1625db728de70ad60a6581f1bf7dfb3d46a8a720
   LXFitManager: e8f88896ba1c848c263c49250b590802a987ab3e
 
 PODFILE CHECKSUM: be1c89e6ce8b804b4f0577813c8d15406d605100
